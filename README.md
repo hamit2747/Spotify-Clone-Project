@@ -19,5 +19,5 @@
 
 
 
-# Kaynaklar
+# SOURCES
 - API: https://rapidapi.com/apidojo/api/shazam/
