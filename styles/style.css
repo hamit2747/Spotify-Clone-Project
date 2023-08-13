@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  background: black;
+  color: white;
+  font-family: "poppins";
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+aside {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 15px;
+}
+aside img {
+  max-width: 130px;
+  cursor: pointer;
+}
+aside nav {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px 20px;
+}
+aside nav a {
+  display: flex;
+  gap: 10px;
+  white-space: nowrap;
+  padding: 10px;
+  border-radius: 10px;
+}
+aside nav a:hover {
+  background: rgb(180, 179, 179);
+}
+
+main {
+  width: 100%;
+  background-color: rgb(66, 66, 66);
+}
+
+main header {
+  display: flex;
+  justify-content: space-between;
+  background: black;
+  padding: 10px;
+}
+main header form {
+  display: flex;
+}
+main header form input {
+  padding: 10px;
+  border-radius: 5px 0 0 5px;
+  border: none;
+}
+main header form button {
+  height: 100%;
+  border: none;
+  padding: 0 25px;
+  padding: 5px 15px;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  background: #1DB954;
+}
+main header ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  align-items: center;
+  font-size: 14px;
+}
+main header li {
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 300ms;
+}
+main header li:hover {
+  background: gray;
+}
+
+main .songs h2 {
+  padding: 20px;
+}
+main .songs .list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+main .songs .list .card {
+  width: 160px;
+  padding: 15px;
+  background: #181818;
+  border-radius: 6px;
+  cursor: pointer;
+}
+main .songs .list .card:hover .play {
+  opacity: 1;
+  bottom: 20px;
+}
+main .songs .list .card  figure {
+  position: relative;
+}
+main .songs .list .card img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+main .songs .list .card .play {
+  position: absolute;
+  right: 10px;
+  bottom: -20px;
+  background: #1DB954;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  opacity: 0;
+  transition: all 0.3s;
+  scale: 0.9;
+}
+
+.playing {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 50px;
+  padding: 10px 40px;
+  background: #000046;
+  background: linear-gradient(to right, #1CB5E0, #000046);
+  color: white;
+  text-shadow: 0 0 10px black;
+  height: 90px;
+}
+.playing .info {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.playing .info p:nth-child(1) {
+  margin-bottom: 5px;
+  color: rgb(208, 207, 207);
+}
+.playing .info img {
+  width: 50px;
+  border-radius: 50%;
+  height: 50px;
+}
+
+#loading-overlay {
+  position:absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -50px;
+  margin-top: -50px;
+  width: 100px;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.5); /* Yarı şeffaf bir arka plan rengi */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Diğer elemanların üzerinde görünmesini sağlamak için yüksek bir z-index */
+}
+
+#loading-overlay img {
+  width: 100px; /* Loading gif boyutunu ayarlayın */
+  height: 100px;
+}
